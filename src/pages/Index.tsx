@@ -17,7 +17,7 @@ const Index = () => {
 
   const interactionMessages = [
     "Sending you a hug 🤗",
-    "Soft. Warm. Yours. 💛",
+    "Soft. Warm. Yours. 💙",
     "You're not alone 🧸",
     "Always here for you ✨",
   ];
@@ -251,7 +251,7 @@ const Index = () => {
               transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                Happy Teddy Day 💛
+                Happy Teddy Dayyy 🍓
               </h2>
               <p className="text-lg text-muted-foreground font-medium">
                 Whenever you miss me, come here.
