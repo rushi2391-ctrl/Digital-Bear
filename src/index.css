@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+/* Teddy Day Design System - Warm, Cozy, Emotionally Comforting */
+
+@layer base {
+  :root {
+    /* Warm cream background */
+    --background: 35 40% 96%;
+    --foreground: 25 30% 25%;
+
+    /* Card surfaces - slightly warmer */
+    --card: 35 35% 94%;
+    --card-foreground: 25 30% 25%;
+
+    --popover: 35 35% 94%;
+    --popover-foreground: 25 30% 25%;
+
+    /* Primary - Warm brown (teddy color) */
+    --primary: 25 35% 45%;
+    --primary-foreground: 35 40% 96%;
+
+    /* Secondary - Soft pink */
+    --secondary: 350 45% 88%;
+    --secondary-foreground: 350 40% 35%;
+
+    /* Muted - Warm beige */
+    --muted: 35 30% 90%;
+    --muted-foreground: 25 20% 50%;
+
+    /* Accent - Peachy warmth */
+    --accent: 20 60% 85%;
+    --accent-foreground: 20 50% 30%;
+
+    /* Highlight - Golden warmth */
+    --highlight: 40 80% 70%;
+    --highlight-foreground: 40 60% 25%;
+
+    /* Love - Soft rose */
+    --love: 350 60% 75%;
+    --love-foreground: 350 50% 30%;
+
+    /* Sparkle - Cream gold */
+    --sparkle: 45 70% 80%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 25% 85%;
+    --input: 30 25% 85%;
+    --ring: 25 35% 45%;
+
+    --radius: 1.5rem;
+
+    /* Teddy specific colors */
+    --teddy-fur: 25 40% 55%;
+    --teddy-fur-light: 30 35% 70%;
+    --teddy-fur-dark: 20 45% 35%;
+    --teddy-nose: 15 30% 30%;
+    --teddy-cheeks: 350 50% 80%;
+    --teddy-eyes: 20 25% 20%;
+
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(35 40% 96%) 0%, hsl(30 35% 92%) 100%);
+    --gradient-glow: radial-gradient(circle, hsl(40 70% 85% / 0.6) 0%, transparent 70%);
+    --gradient-love: linear-gradient(180deg, hsl(350 45% 88% / 0.3) 0%, transparent 100%);
+  }
+
+  .dark {
+    --background: 25 20% 12%;
+    --foreground: 35 30% 90%;
+
+    --card: 25 20% 15%;
+    --card-foreground: 35 30% 90%;
+
+    --popover: 25 20% 15%;
+    --popover-foreground: 35 30% 90%;
+
+    --primary: 30 40% 65%;
+    --primary-foreground: 25 20% 12%;
+
+    --secondary: 350 30% 25%;
+    --secondary-foreground: 350 40% 85%;
+
+    --muted: 25 15% 20%;
+    --muted-foreground: 30 20% 60%;
+
+    --accent: 20 40% 25%;
+    --accent-foreground: 20 50% 85%;
+
+    --highlight: 40 60% 50%;
+    --highlight-foreground: 40 80% 95%;
+
+    --love: 350 40% 45%;
+    --love-foreground: 350 50% 90%;
+
+    --sparkle: 45 50% 60%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 15% 25%;
+    --input: 25 15% 25%;
+    --ring: 30 40% 65%;
+
+    --teddy-fur: 25 35% 50%;
+    --teddy-fur-light: 30 30% 60%;
+    --teddy-fur-dark: 20 40% 30%;
+    --teddy-nose: 15 25% 25%;
+    --teddy-cheeks: 350 40% 55%;
+    --teddy-eyes: 20 20% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .text-warm {
+    @apply text-foreground;
+  }
+
+  .text-love {
+    color: hsl(var(--love));
+  }
+
+  .bg-warm-gradient {
+    background: var(--gradient-warm);
+  }
+
+  .glow-soft {
+    box-shadow: 0 0 40px hsl(var(--highlight) / 0.3);
+  }
+
+  .teddy-shadow {
+    filter: drop-shadow(0 8px 20px hsl(var(--teddy-fur-dark) / 0.3));
+  }
+}
+
+@layer utilities {
+  /* Breathing animation for teddy */
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes bounce-gentle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  @keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes heart-float {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-50px) scale(0.5); }
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--love) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--love) / 0.5); }
+  }
+
+  .animate-breathe {
+    animation: breathe 2.2s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 2.8s ease-in-out infinite;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounce-gentle 2s ease-in-out infinite;
+  }
+
+  .animate-wiggle {
+    animation: wiggle 0.5s ease-in-out;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
