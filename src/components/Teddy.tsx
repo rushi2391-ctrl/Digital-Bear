@@ -218,7 +218,7 @@ const Teddy = ({ isRevealed, name, onTap }: TeddyProps) => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
             >
-              💛
+              ❤️
             </motion.text>
           )}
         </motion.svg>
